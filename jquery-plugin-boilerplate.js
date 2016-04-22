@@ -32,7 +32,7 @@
 
 		$.extend(Plugin.prototype, pluginLogic);
 
-		var instance = new Plugin;
+		var instance = new Plugin();
 		return instance;
 	};
 
@@ -62,7 +62,7 @@
 			this.bar();
 
 			this.$element.on("click." + pluginName, function() {
-				$(this).text("Clicked", Math.random())
+				$(this).text("Clicked", Math.random());
 			});
 
 			var proto = this; // access `pluginLogic` in function contexts
