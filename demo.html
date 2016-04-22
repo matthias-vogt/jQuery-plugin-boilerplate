@@ -1,0 +1,33 @@
+<!doctype html>
+ <head>
+ 	<meta charset="utf-8">
+ 	<title>Demo</title>
+ 	<meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ </head>
+ <body>
+
+ 	<div>&lt;div&gt; *click*</div>
+ 	<a>&lt;a&gt; *click*</a>
+
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+ 	<script type="text/javascript" src="jquery-plugin-boilerplate.js"></script>
+
+ 	<script>
+
+ 	$("div").defaultPluginName({
+ 		foo: 2,
+ 		bar: 3
+ 	});
+ 	$("a").defaultPluginName();
+ 	$("div, a").defaultPluginName();
+
+
+ 	$("div").each(function() {
+ 		//console.log("data", $(this).data("plugin_defaultPluginName"));
+ 		$(this).data("plugin_defaultPluginName").destroy()
+ 	});
+
+ 	</script>
+ </body>
